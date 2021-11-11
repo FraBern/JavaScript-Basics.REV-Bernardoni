@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: none;
+  color: white;
+  line-height: 2;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+h1, h2{
+ font-weight: 400;
+}
+
+ul{
+  list-style: none;
+}
+
+p{
+  margin: 10px 0;
+}
+
+img{
+  width: 100%;
+}
+
+/*Navbar*/
+.navbar .logo{
+  font-weight:400;
+  font-size: 30px;
+}
+
+.navbar{
+  background-color: #004080;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  color: white;
+  opacity: 0.7;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  transition: 1s;
+}
+
+.navbar ul{
+  display: flex;
+}
+
+.navbar ul li a{
+  padding: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover{
+  border-bottom: 2px solid rgb(215, 8, 8);
+}
+
+.navbar h1{
+  font-size: 50px;
+}
+
+/*Content*/
+.box{
+  height: 100vh;
+  background: url("../img/counterDesk.png") no-repeat center;
+  position: relative;
+  }
+
+.box .content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  height: 100%;
+  text-shadow: 2px 2px 2px black;
+}
+
+.box .content p{
+  font-size: 25px;
+  padding-top: 300px;
+}
+
+.box::before{
+  content: "";
+  position: absolute;
+  width:100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #001a33;
+  opacity: 0.4;
+}
+
+.box *{
+  z-index: 7;
+}
+
+/*Section Description*/
+.description{
+ background: url("../img/instructions.jpg");
+}
+
+.section-padding{
+  padding: 150px 50px 150px;
+}
+
+.section-header{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ text-align: center;
+ justify-content: center;
+ color: #001a33;
+}
+
+.section-header p{
+ font-size: 20px;
+}
+
+/*Section Counter Items*/
+.flex-columns .column{
+  display: flex;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+  width: 50%;
+}
+
+.flex-columns .column .column-2{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 70px;
+}
+
+.flex-columns .column img{
+  width: 100%;
+  height: 100%;
+}
+
+/*Media Queries*/
+@media(max-width:768px){
+
+.navbar .logo{
+  font-size: 25px;
+}
+
+.navbar{
+  flex-direction: column;
+  padding: 5px;
+  line-height: 2;
+  height: 90px;
+}
+
+.box .content {
+  font-size: 15px;
+  padding-bottom: 20px;
+  padding-top: 70px;
+}
+
+.box .content p{
+  font-size: 20px;
+  padding-top: 400px;
+}
+
+.section-padding{
+  padding: 150px 50px 130px;
+}
+
+.section-header p{
+  font-size: 20px;
+}
+}
+
+@media(max-width:425px){
+.navbar .logo{
+  font-size: 20px;
+}
+
+.navbar{
+  flex-direction: column;
+  padding: 3px;
+  line-height: 2;
+  height: 70px;
+  }
+
+.navbar ul li a{
+  font-size: 15px;
+}
+
+.box{
+  background-size: 40% 40%;
+}
+
+.box .content {
+  font-size: 10px;
+  padding-top: 120px;
+  padding-bottom: 50px;
+}
+
+.box .content p{
+  font-size: 15px;
+  padding-top: 250px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.section-header h2{
+  font-size: 18px;
+}
+
+.section-header p{
+  font-size: 15px;
+}
+
+.section-header li{
+  font-size: 15px;
+}
+
+.flex-columns .column{
+  flex-direction: column;
+}
+
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+  width: 100%;
+}
+
+@media(max-width:425px){
+.navbar .logo{
+  font-size: 18px;
+}
+
+.navbar{
+  flex-direction: column;
+  padding: 3px;
+  line-height: 2;
+  height: 70px;
+}
+
+.navbar ul li a{
+  font-size: 13px;
+}
